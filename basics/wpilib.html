@@ -355,8 +355,29 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#overview_of_execution" title="Overview of execution" class="md-nav__link">
+    Overview of execution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new_project_files" title="New Project Files" class="md-nav__link">
+    New Project Files
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" title="Summary" class="md-nav__link">
+    Summary
+  </a>
   
 </li>
       
@@ -438,8 +459,29 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#overview_of_execution" title="Overview of execution" class="md-nav__link">
+    Overview of execution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new_project_files" title="New Project Files" class="md-nav__link">
+    New Project Files
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" title="Summary" class="md-nav__link">
+    Summary
+  </a>
   
 </li>
       
@@ -490,7 +532,6 @@
 <li>In the code, a command based robot is made up of 3 <strong>packages</strong> (<strong>folders</strong>) labeled robot, commands, and subsystems</li>
 <li>There are other types of robots but we will use Command Based</li>
 </ul>
-<hr />
 <h3 id="subsystems">Subsystems<a class="headerlink" href="#subsystems" title="Permanent link">#</a></h3>
 <ul>
 <li>A <strong>subsystem</strong> is a special template class made by FRC. </li>
@@ -606,6 +647,50 @@ It is good practice to call <code>end()</code> in <code>interrupted()</code></di
 </li>
 </ul>
 <hr />
+<h3 id="overview_of_execution">Overview of execution<a class="headerlink" href="#overview_of_execution" title="Permanent link">#</a></h3>
+<ul>
+<li>In FRC programming our main class is <strong>Robot.java</strong> and all other classes (command files and subsystem files) must be loaded from <strong>Robot.java</strong> either directly or indirectly <ul>
+<li>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<strong>Robot.java</strong> loads <strong>OI.java</strong>, <strong>OI.java</strong> loads <strong>DriveForward.java</strong>.</div>
+</li>
+</ul>
+</li>
+<li>All <strong>subsystem</strong> files must be added to <strong>Robot.java</strong>’s auto-created <code>robotInit()</code> method.<ul>
+<li>This loads our <strong>subsystems</strong> into the code and allow its public methods to be useable by other files such as commands later by typing <code>Robot.nameOfSubsystem.desiredMethod();</code></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="new_project_files">New Project Files<a class="headerlink" href="#new_project_files" title="Permanent link">#</a></h3>
+<ul>
+<li>When creating a new command based robot project, the following classes (files) will be created:<ul>
+<li><strong>Robot.java</strong> - The main class of the robot which is run when a robot boots up. </li>
+<li><strong>OI.java</strong> - This class binds our <strong>commands</strong> to a physical operator interface such as a</li>
+<li>joystick or controller.<ul>
+<li>This file is already in <code>robotInit()</code> by default so classes called here will also be loaded by the program</li>
+</ul>
+</li>
+<li><strong>RobotMap.java</strong> - This class is used to hold all the ports or ID numbers of sensors or devices connected to the robot and assign them a variable name.<ul>
+<li>This provides flexibility changing wiring, makes checking the wiring easier and significantly reduces the number of magic numbers floating around.</li>
+</ul>
+</li>
+<li><strong>ExampleSubsystem.java</strong> and <strong>ExampleCommand.java</strong> are auto-created examples.</li>
+</ul>
+</li>
+</ul>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">#</a></h2>
+<ul>
+<li>Command based robots are broken down into <strong>subsystems</strong> and <strong>commands</strong></li>
+<li><strong>Subsystems</strong> define what the robot is made of and what it can do while <strong>commands</strong> actually tell the robot to do those things</li>
+<li>All classes must directly or indirectly connect to <strong>Robot.java</strong>.<ul>
+<li>All <strong>Subsystems</strong> must be added to <strong>Robot.java</strong>’s <code>robotInit()</code> </li>
+</ul>
+</li>
+<li><strong>RobotMap.java</strong> holds port numbers and IDs accessible throughout the program by typing: <code>RobotMap.NameOfMotor()</code></li>
+<li><strong>OI.java</strong> connects our commands to physical controllers</li>
+</ul>
                 
                   
                 

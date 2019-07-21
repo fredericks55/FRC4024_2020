@@ -527,9 +527,44 @@
 </li>
 <li>Using a dog as an example we can tell the dog to blink by creating a <strong>BlinkEyes</strong> command<ul>
 <li>The command would call the method, <strong>closeEyes()</strong> then the method <strong>openEyes()</strong></li>
-</ul>
+<li>
+<div class="admonition example">
+<p class="admonition-title">BlinkEyes Command</p>
+<div class="codehilite"><pre><span></span><span class="c1">//This command will continuously run the two methods in execute</span>
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">dog</span><span class="o">.</span><span class="na">head</span><span class="o">.</span><span class="na">closeEyes</span><span class="o">();</span>
+    <span class="n">dog</span><span class="o">.</span><span class="na">head</span><span class="o">.</span><span class="na">openEyes</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div></div>
 </li>
 </ul>
+</li>
+<li>A robot example of a <strong>DriveForward</strong> command would call (use) the <strong>setSpeed</strong> methods that we created in the <strong>Drivetrain</strong> subsystem</li>
+<li><strong>DriveForward</strong>, when executed, will tell our robot to drive forward using the <strong>Drivetrain</strong> subsystem</li>
+<li>
+<div class="admonition example">
+<p class="admonition-title">DriveForward Command</p>
+<div class="codehilite"><pre><span></span><span class="c1">//This command tells the robot to drive forward full speed</span>
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">initialize</span><span class="o">(){</span>
+    <span class="n">robot</span><span class="o">.</span><span class="na">drivetrain</span><span class="o">.</span><span class="na">setSpeed</span><span class="o">(</span><span class="mf">1.0</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div></div>
+</li>
+<li>The template for FRC commands actually come with some pre-defined methods that have special properties for FRC robots, they are:<ul>
+<li><code>initialize()</code> - Methods in here are called just before this Command runs the first time.</li>
+<li><code>execute()</code> - Methods in here are called repeatedly when this Command is scheduled to run</li>
+<li><code>isFinished()</code> - When this returns true, the Command stops running execute() </li>
+<li><code>end()</code> - Methods in here are called once after isFinished returns true</li>
+<li><code>interrupted()</code> - Methods in here are called when another command which requires one or more of the same subsystems is scheduled to run</li>
+</ul>
+</li>
+<li>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+It is good practice to call <code>end()</code> in <code>interrupted()</code></div>
+</li>
+</ul>
+<hr />
                 
                   
                 

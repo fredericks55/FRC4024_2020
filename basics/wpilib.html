@@ -325,19 +325,38 @@
     Command Based Robot
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#subsystems" title="Subsystems" class="md-nav__link">
     Subsystems
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#commands" title="Commands" class="md-nav__link">
     Commands
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default_command_structure" title="Default Command Structure" class="md-nav__link">
+    Default Command Structure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -389,19 +408,38 @@
     Command Based Robot
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#subsystems" title="Subsystems" class="md-nav__link">
     Subsystems
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#commands" title="Commands" class="md-nav__link">
     Commands
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default_command_structure" title="Default Command Structure" class="md-nav__link">
+    Default Command Structure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -453,7 +491,7 @@
 <li>There are other types of robots but we will use Command Based</li>
 </ul>
 <hr />
-<h2 id="subsystems">Subsystems<a class="headerlink" href="#subsystems" title="Permanent link">#</a></h2>
+<h3 id="subsystems">Subsystems<a class="headerlink" href="#subsystems" title="Permanent link">#</a></h3>
 <ul>
 <li>A <strong>subsystem</strong> is a special template class made by FRC. </li>
 <li>In robotics, subsystems are sections of the whole robot.<ul>
@@ -509,7 +547,7 @@
 </li>
 </ul>
 <hr />
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">#</a></h2>
+<h3 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">#</a></h3>
 <ul>
 <li>A <strong>command</strong> is a special template class (file) made by FRC.</li>
 <li>In robotics, commands are actions you want a robot to do (just like a real life command).<ul>
@@ -550,6 +588,9 @@
 <span class="o">}</span>
 </pre></div></div>
 </li>
+</ul>
+<h4 id="default_command_structure">Default Command Structure<a class="headerlink" href="#default_command_structure" title="Permanent link">#</a></h4>
+<ul>
 <li>The template for FRC commands actually come with some pre-defined methods that have special properties for FRC robots, they are:<ul>
 <li><code>initialize()</code> - Methods in here are called just before this Command runs the first time.</li>
 <li><code>execute()</code> - Methods in here are called repeatedly when this Command is scheduled to run</li>

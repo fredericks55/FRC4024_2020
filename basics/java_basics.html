@@ -313,19 +313,18 @@
     Classes
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#constructors" title="Constructors" class="md-nav__link">
     Constructors
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#variables" title="Variables" class="md-nav__link">
-    Variables
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -334,19 +333,38 @@
     Methods
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
+  <a href="#variables" title="Variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#scope" title="Scope" class="md-nav__link">
     Scope
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" title="Parameters" class="md-nav__link">
-    Parameters
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -355,18 +373,12 @@
     Comments
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conventions" title="Conventions" class="md-nav__link">
     Conventions
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -430,19 +442,18 @@
     Classes
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#constructors" title="Constructors" class="md-nav__link">
     Constructors
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#variables" title="Variables" class="md-nav__link">
-    Variables
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -451,19 +462,38 @@
     Methods
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
+  <a href="#variables" title="Variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#scope" title="Scope" class="md-nav__link">
     Scope
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" title="Parameters" class="md-nav__link">
-    Parameters
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -472,18 +502,12 @@
     Comments
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conventions" title="Conventions" class="md-nav__link">
     Conventions
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -540,8 +564,7 @@ main loads class1, class1 loads class2</div>
 <li>Classes are made up of variables and methods and are often used to separate and organize your code.</li>
 <li>Classes can also <strong>call</strong> (use) variables or methods of other classes if those have been set to public.</li>
 </ul>
-<hr />
-<h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">#</a></h2>
+<h3 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">#</a></h3>
 <ul>
 <li>Classes can also have a <strong><em>constructor</em></strong> which is a special type of <strong>method</strong> that has the <strong>same name (case sensitive)</strong> as the class file<ul>
 <li>Constructors are always called when the class is loaded into the program for the first time. This is often the only time they are called.</li>
@@ -551,6 +574,41 @@ main loads class1, class1 loads class2</div>
 </ul>
 </li>
 </ul>
+<hr />
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h2>
+<ul>
+<li>Methods, also known as functions, can be thought of as subprograms or routines that run inside of your main program.</li>
+<li>Methods are used when you want to run the same code multiple times. Copying and pasting code is <strong><em>BAD!</em></strong> Use methods instead!</li>
+<li>Methods are also useful to access only certain parts or functions of another class.</li>
+<li>Methods can also have their own variables (<strong>local</strong>) or use variables available throughout the whole class (<strong>global variables</strong>), this will be explained more in the <a href="#Scope">scope section</a>.</li>
+<li>Methods can call (use) other methods, even multiple times.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">value</span><span class="o">;</span>
+<span class="kt">void</span> <span class="nf">increment</span><span class="o">(){</span>
+    <span class="n">value</span><span class="o">++;</span>
+<span class="o">}</span>
+</pre></div>
+
+</div>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">#</a></h3>
+<ul>
+<li>Parameters are variables that are passed (sent) to a method for it to use.</li>
+<li>You can pass more than one parameter but order matters when calling the method.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="codehilite"><pre><span></span><span class="c1">// Example of a method with a parameter</span>
+<span class="kt">double</span> <span class="nf">half</span><span class="o">(</span><span class="kt">int</span> <span class="n">num1</span><span class="o">){</span> 
+    <span class="kt">double</span> <span class="n">multiplier</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">;</span>
+    <span class="k">return</span> <span class="n">num1</span><span class="o">*</span><span class="n">multiplier</span><span class="o">;</span> 
+<span class="o">}</span>
+
+<span class="kt">int</span> <span class="n">newNumber</span> <span class="o">=</span> <span class="n">half</span><span class="o">(</span><span class="mi">12</span><span class="o">);</span> <span class="c1">// &lt;---- Method being called (used) in code</span>
+</pre></div>
+
+</div>
 <hr />
 <h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">#</a></h2>
 <ul>
@@ -582,26 +640,7 @@ A variable can either hold a true or false value and is being assigned a true va
 <p>Most non-static variables can have their values assigned or assigned at any point elsewhere in your program</p>
 </li>
 </ul>
-<hr />
-<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h2>
-<ul>
-<li>Methods, also known as functions, can be thought of as subprograms or routines that run inside of your main program.</li>
-<li>Methods are used when you want to run the same code multiple times. Copying and pasting code is <strong><em>BAD!</em></strong> Use methods instead!</li>
-<li>Methods are also useful to access only certain parts or functions of another class.</li>
-<li>Methods can also have their own variables (local) or use variables available throughout the whole class (global variables), this will be explained more in the scope section.</li>
-<li>Methods can call (use) other methods, even multiple times.</li>
-</ul>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">value</span><span class="o">;</span>
-<span class="kt">void</span> <span class="nf">increment</span><span class="o">(){</span>
-    <span class="n">value</span><span class="o">++;</span>
-<span class="o">}</span>
-</pre></div>
-
-</div>
-<hr />
-<h2 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">#</a></h2>
+<h3 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">#</a></h3>
 <ul>
 <li>When creating a variable, where you create it matters. This is known as the scope of a variable.</li>
 <li>The scope is where a variable can be seen within a class<ul>
@@ -630,24 +669,6 @@ A variable can either hold a true or false value and is being assigned a true va
     <span class="n">example</span> <span class="o">=</span> <span class="n">example</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
     <span class="k">return</span> <span class="n">example</span>
 <span class="o">}</span>
-</pre></div>
-
-</div>
-<hr />
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">#</a></h2>
-<ul>
-<li>Parameters are variables that are passed (sent) to a method for it to use.</li>
-<li>You can pass more than one parameter but order matters when calling the method.</li>
-</ul>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="codehilite"><pre><span></span><span class="c1">// Example of a method with a parameter</span>
-<span class="kt">double</span> <span class="nf">half</span><span class="o">(</span><span class="kt">int</span> <span class="n">num1</span><span class="o">){</span> 
-    <span class="kt">double</span> <span class="n">multiplier</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">;</span>
-    <span class="k">return</span> <span class="n">num1</span><span class="o">*</span><span class="n">multiplier</span><span class="o">;</span> 
-<span class="o">}</span>
-
-<span class="kt">int</span> <span class="n">newNumber</span> <span class="o">=</span> <span class="n">half</span><span class="o">(</span><span class="mi">12</span><span class="o">);</span> <span class="c1">// &lt;---- Method being called (used) in code</span>
 </pre></div>
 
 </div>
@@ -691,7 +712,7 @@ A variable can either hold a true or false value and is being assigned a true va
 
 </div>
 <hr />
-<h3 id="conventions">Conventions<a class="headerlink" href="#conventions" title="Permanent link">#</a></h3>
+<h2 id="conventions">Conventions<a class="headerlink" href="#conventions" title="Permanent link">#</a></h2>
 <ul>
 <li>There are also many different conventions when programming, this ensures that programs are readable between different people.</li>
 <li>A common naming convention:<ul>

@@ -405,6 +405,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vscode.html" title="**WIP** Visual Studio Code Tips" class="md-nav__link">
+      **WIP** Visual Studio Code Tips
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -717,10 +729,10 @@
 <ul>
 <li>Objects, variables, and classes (in Java) make up our programs. We define, modify, use these variables and objects to make our programs run.</li>
 <li>Programs use key words to define characteristics of variables or objects. Basic keywords:<ul>
-<li><code>public</code> - an object accessible by other classes (files)</li>
-<li><code>private</code> - an object only accessible by its containing class (file).</li>
-<li><code>protected</code> - like private but can be seen by subclasses</li>
-<li><code>return</code> - value to return or give back after method execution (run). void - a method that returns no value</li>
+<li><code class="highlight"><span class="kd">public</span></code> - an object accessible by other classes (files)</li>
+<li><code class="highlight"><span class="kd">private</span></code> - an object only accessible by its containing class (file).</li>
+<li><code class="highlight"><span class="kd">protected</span></code> - like private but can be seen by subclasses</li>
+<li><code class="highlight"><span class="k">return</span></code> - value to return or give back after method execution (run). void - a method that returns no value</li>
 </ul>
 </li>
 </ul>
@@ -765,7 +777,7 @@ main loads class1, class1 loads class2</div>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">value</span><span class="o">;</span>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">value</span><span class="o">;</span>
 <span class="kt">void</span> <span class="nf">increment</span><span class="o">(){</span>
     <span class="n">value</span><span class="o">++;</span>
 <span class="o">}</span>
@@ -779,7 +791,7 @@ main loads class1, class1 loads class2</div>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="codehilite"><pre><span></span><span class="c1">// Example of a method with a parameter</span>
+<div class="highlight"><pre><span></span><span class="c1">// Example of a method with a parameter</span>
 <span class="kt">double</span> <span class="nf">half</span><span class="o">(</span><span class="kt">int</span> <span class="n">num1</span><span class="o">){</span> 
     <span class="kt">double</span> <span class="n">multiplier</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">;</span>
     <span class="k">return</span> <span class="n">num1</span><span class="o">*</span><span class="n">multiplier</span><span class="o">;</span> 
@@ -800,18 +812,18 @@ main loads class1, class1 loads class2</div>
 <li>
 <p>Data types define what type of data is being stored in the variables:</p>
 <ul>
-<li><code>int</code> - integers (whole numbers)</li>
-<li><code>double</code> - double precision floating point (fractional/decimal values) </li>
-<li><code>boolean</code> - true or false (true = 1 or false = 0) values.</li>
-<li><code>string</code> - text values contained in parentheses</li>
+<li><code class="highlight"><span class="kt">int</span></code> - integers (whole numbers)</li>
+<li><code class="highlight"><span class="kt">double</span></code> - double precision floating point (fractional/decimal values) </li>
+<li><code class="highlight"><span class="kt">boolean</span></code> - true or false (true = 1 or false = 0) values.</li>
+<li><code class="highlight"><span class="n">string</span></code> - text values contained in parentheses</li>
 <li>
 <div class="admonition example">
-<p class="admonition-title">Example: <code>int sum;</code></p>
+<p class="admonition-title">Example: <code class="highlight"><span class="kt">int</span> <span class="n">sum</span><span class="o">;</span></code></p>
 A variable that can hold whole number values</div>
 </li>
 <li>
 <div class="admonition example">
-<p class="admonition-title">Example: <code>boolean isFull = true;</code></p>
+<p class="admonition-title">Example: <code class="highlight"><span class="kt">boolean</span> <span class="n">isFull</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span></code></p>
 A variable can either hold a true or false value and is being assigned a true value</div>
 </li>
 </ul>
@@ -834,7 +846,7 @@ A variable can either hold a true or false value and is being assigned a true va
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example of a Local Variable</p>
-<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">testMethod</span><span class="o">()</span> <span class="o">{</span>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">testMethod</span><span class="o">()</span> <span class="o">{</span>
     <span class="kt">int</span> <span class="n">example</span> <span class="o">=</span> <span class="mi">12</span><span class="o">;</span> <span class="c1">// Instide of method</span>
     <span class="n">example</span> <span class="o">=</span> <span class="n">example</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
     <span class="k">return</span> <span class="n">example</span>
@@ -844,7 +856,7 @@ A variable can either hold a true or false value and is being assigned a true va
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example of a Public Variable</p>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">example</span> <span class="o">=</span> <span class="mi">12</span><span class="o">;</span> <span class="c1">// Outside of method</span>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">example</span> <span class="o">=</span> <span class="mi">12</span><span class="o">;</span> <span class="c1">// Outside of method</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testMethod</span><span class="o">()</span> <span class="o">{</span>
     <span class="n">example</span> <span class="o">=</span> <span class="n">example</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
     <span class="k">return</span> <span class="n">example</span>
@@ -861,7 +873,7 @@ A variable can either hold a true or false value and is being assigned a true va
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example: Single Line Comments</p>
-<div class="codehilite"><pre><span></span><span class="c1">// This is what a single line comment looks like</span>
+<div class="highlight"><pre><span></span><span class="c1">// This is what a single line comment looks like</span>
 
 <span class="c1">// You can also have multiple</span>
 <span class="c1">// single line comments in a row</span>
@@ -870,7 +882,7 @@ A variable can either hold a true or false value and is being assigned a true va
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example: Multi Line Comments</p>
-<div class="codehilite"><pre><span></span><span class="cm">/* </span>
+<div class="highlight"><pre><span></span><span class="cm">/* </span>
 <span class="cm">This is what a</span>
 <span class="cm">multiline comment</span>
 <span class="cm">looks like </span>
@@ -880,7 +892,7 @@ A variable can either hold a true or false value and is being assigned a true va
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example: Doc Comments</p>
-<div class="codehilite"><pre><span></span><span class="cm">/**</span>
+<div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * This is a doc comment</span>
 <span class="cm"> * </span>
 <span class="cm"> * &lt;ul&gt;</span>

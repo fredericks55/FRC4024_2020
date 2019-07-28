@@ -291,6 +291,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basics/vscode.html" title="**WIP** Visual Studio Code Tips" class="md-nav__link">
+      **WIP** Visual Studio Code Tips
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -397,6 +409,19 @@
     Creating a New Project
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-project-contents" title="Default Project Contents" class="md-nav__link">
+    Default Project Contents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -414,6 +439,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#default-subsytem-contents" title="Default Subsytem Contents" class="md-nav__link">
+    Default Subsytem Contents
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -423,6 +455,19 @@
   <a href="#creating-a-new-command" title="Creating a New Command" class="md-nav__link">
     Creating a New Command
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-command-contents" title="Default Command Contents" class="md-nav__link">
+    Default Command Contents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -582,6 +627,19 @@
     Creating a New Project
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-project-contents" title="Default Project Contents" class="md-nav__link">
+    Default Project Contents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -599,6 +657,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#default-subsytem-contents" title="Default Subsytem Contents" class="md-nav__link">
+    Default Subsytem Contents
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -608,6 +673,19 @@
   <a href="#creating-a-new-command" title="Creating a New Command" class="md-nav__link">
     Creating a New Command
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-command-contents" title="Default Command Contents" class="md-nav__link">
+    Default Command Contents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -669,6 +747,7 @@
 <p>1)  When prompted <strong>“Would you like to open the folder?”</strong>, select <strong>Yes (Current Window)</strong></p>
 <p><img alt="6" src="../assets/images/new_prod/new_prod_6.png" /></p>
 </div>
+<h3 id="default-project-contents">Default Project Contents<a class="headerlink" href="#default-project-contents" title="Permanent link">#</a></h3>
 <h2 id="creating-a-new-subsystem">Creating a New Subsystem<a class="headerlink" href="#creating-a-new-subsystem" title="Permanent link">#</a></h2>
 <div class="admonition summary">
 <p>1) Double click on the src folder to expand it.<br />
@@ -698,24 +777,68 @@ We have created a new subsystem but we have not yet linked it to Robot.java.  </
 </div>
 </div>
 <div class="admonition summary">
-<p>1) In Robot.java we will create a new <strong>global</strong> variable of type <code>DesiredSubsystemName</code> (i.e. <code>Drivetrain</code>) named <code>m_desiredSubsystemName</code> (<code>i.e. m_drivetrain</code>) and set its value to <code>null</code>.  </p>
+<p>1) In Robot.java we will create a new <strong>global</strong> variable of type <code>DesiredSubsystemName</code> (i.e. <code>Drivetrain</code>) named <code class="highlight"><span class="n">m_desiredSubsystemName</span></code> (<code>i.e. m_drivetrain</code>) and set its value to <code>null</code>.  </p>
 <p><img alt="1" src="../assets/images/new_prod/new_prod_1.png" /></p>
 </div>
 <div class="admonition summary">
-<p>2) In the <code>robotInit()</code> method add: <code>m_desiredSubsystemName = new DesiredSubsystemName();</code> (i.e. <code>m_drivetrain = new Drivetrain();</code>)</p>
+<p>2) In the <code>robotInit()</code> method add: <code class="highlight"><span class="n">m_desiredSubsystemName</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DesiredSubsystemName</span><span class="o">();</span></code> (i.e. <code class="highlight"><span class="n">m_drivetrain</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Drivetrain</span><span class="o">();</span></code>)</p>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
 <p>This must always be done above <strong>OI</strong> and <strong>Telemetry/SmartDashboard</strong> (if present).</p>
 </div>
 <p><img alt="1" src="../assets/images/new_prod/new_prod_1.png" /></p>
 </div>
-<p>Now when we use this subsystem in commands, we must call <code>Robot.m_desiredSubsystemName.</code> to get access to it and its methods. (i.e. <code>Robot.m_drivetrain.someMethod()</code>)</p>
+<p>Now when we use this subsystem in commands, we must call <code class="highlight"><span class="n">Robot</span><span class="o">.</span><span class="na">m_desiredSubsystemName</span><span class="o">.</span></code> to get access to it and its methods. (i.e. <code class="highlight"><span class="n">Robot</span><span class="o">.</span><span class="na">m_drivetrain</span><span class="o">.</span><span class="na">someMethod</span><span class="o">()</span></code>)</p>
+<h3 id="default-subsytem-contents">Default Subsytem Contents<a class="headerlink" href="#default-subsytem-contents" title="Permanent link">#</a></h3>
+<ul>
+<li>Newly created subsystems are empty with the exception of the initDefaultCommand.</li>
+<li>We will create a constructor ourselves later.</li>
+<li>initDefaultCommand - a command that will run automatically every time the subsystem is called.<ul>
+<li>When another command that requires the same subsystem is called, the initDefaultCommand will stop and restart after the new command has finished.<ul>
+<li>This process calls the interrupted method of the command being called initDefaultCommand</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="1" src="../assets/images/new_prod/new_subsystem.png" /></p>
+</div>
 <h2 id="creating-a-new-command">Creating a New Command<a class="headerlink" href="#creating-a-new-command" title="Permanent link">#</a></h2>
-<p><!-- TODO: Work in progress -->
-Click on the src folder to expand it. Do the same for commands<br />
-Right click on commands and select Create a new class/ command.<br />
-Select Command and type DriveArcade for the name and hit enter on your keyboard.<br />
-Click on the newly create DriveArcade.java  </p>
+<div class="admonition summary">
+<p>1) Double click on the src folder to expand it.<br />
+2) Do the same for commands</p>
+<p><img alt="1" src="../assets/images/new_prod/new_prod_1.png" /></p>
+</div>
+<div class="admonition summary">
+<p>3) Right click on commands and select Create a new class/ command.  </p>
+<p><img alt="1" src="../assets/images/new_prod/new_prod_1.png" /></p>
+</div>
+<div class="admonition summary">
+<p>4) Select Command and type DriveArcade for the name and hit enter on your keyboard.  </p>
+<p><img alt="1" src="../assets/images/new_prod/new_prod_1.png" /></p>
+</div>
+<div class="admonition summary">
+<p>5) Click on the newly create DriveArcade.java  </p>
+<p><img alt="1" src="../assets/images/new_prod/new_prod_1.png" /></p>
+</div>
+<h3 id="default-command-contents">Default Command Contents<a class="headerlink" href="#default-command-contents" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Constructor</strong> - Called when the robot program is <strong><em>FIRST</em></strong> loaded.<ul>
+<li>Subsystem dependencies are declared here.</li>
+</ul>
+</li>
+<li><strong>Initialize</strong> - Called <strong><em>ONCE</em></strong> just before this Command runs the first time.</li>
+<li><strong>Execute</strong> - Called <strong><em>REPEATEDLY</em></strong> when this Command is scheduled to run</li>
+<li><strong>isFinished</strong> - Make this return <strong><em>TRUE</em></strong> when this Command no longer needs to run <code>execute()</code> (initialize always runs once regardless). </li>
+<li><strong>End</strong> - Called <strong><em>ONCE</em></strong> after isFinished returns true</li>
+<li><strong>Interrupted</strong> - Called when <strong><em>another command</em></strong> which requires one or more of the same subsystems is scheduled to run</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="1" src="../assets/images/new_prod/new_command.png" /></p>
+</div>
                 
                   
                 

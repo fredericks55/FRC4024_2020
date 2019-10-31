@@ -38,12 +38,18 @@
     
     
       
-        <title>**WIP** Creating Project Files - FRC Java Programming</title>
+        <title>Creating Project Files - FRC Java Programming</title>
       
     
     
       <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
       
     
     
@@ -67,7 +73,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="light-blue">
   
     <svg class="md-svg">
       <defs>
@@ -81,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#wip-creating-project-files" tabindex="1" class="md-skip">
+      <a href="#creating-project-files" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -107,7 +115,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                **WIP** Creating Project Files
+                Creating Project Files
               
             </span>
           
@@ -158,7 +166,7 @@
     </div>
   
   <div class="md-source__repository">
-    Example Project
+    Tutorial Bot
   </div>
 </a>
           </div>
@@ -205,7 +213,7 @@
     </div>
   
   <div class="md-source__repository">
-    Example Project
+    Tutorial Bot
   </div>
 </a>
     </div>
@@ -291,18 +299,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../basics/vscode.html" title="**WIP** Visual Studio Code Tips" class="md-nav__link">
-      **WIP** Visual Studio Code Tips
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -318,11 +314,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      Dev Enviroment Setup
+      Dev Environment Setup
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        Dev Enviroment Setup
+        Dev Environment Setup
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -333,8 +329,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../setup/install_software.html" title="**WIP** Installing Necessary Software" class="md-nav__link">
-      **WIP** Installing Necessary Software
+    <a href="../setup/install_software.html" title="Installing Necessary Software" class="md-nav__link">
+      Installing Necessary Software
     </a>
   </li>
 
@@ -380,11 +376,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        **WIP** Creating Project Files
+        Creating Project Files
       </label>
     
-    <a href="new_project.html" title="**WIP** Creating Project Files" class="md-nav__link md-nav__link--active">
-      **WIP** Creating Project Files
+    <a href="new_project.html" title="Creating Project Files" class="md-nav__link md-nav__link--active">
+      Creating Project Files
     </a>
     
       
@@ -440,8 +436,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#default-subsytem-contents" title="Default Subsytem Contents" class="md-nav__link">
-    Default Subsytem Contents
+  <a href="#default-subsystem-contents" title="Default Subsystem Contents" class="md-nav__link">
+    Default Subsystem Contents
   </a>
   
 </li>
@@ -658,8 +654,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#default-subsytem-contents" title="Default Subsytem Contents" class="md-nav__link">
-    Default Subsytem Contents
+  <a href="#default-subsystem-contents" title="Default Subsystem Contents" class="md-nav__link">
+    Default Subsystem Contents
   </a>
   
 </li>
@@ -708,7 +704,7 @@
                   <a href="https://github.com/FRCTeam3255/FRC-Java-Tutorial/edit/remaster/Docs_Source/docs/programming/new_project.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="wip-creating-project-files"><strong>WIP</strong> Creating Project Files<a class="headerlink" href="#wip-creating-project-files" title="Permanent link">#</a></h1>
+                <h1 id="creating-project-files">Creating Project Files<a class="headerlink" href="#creating-project-files" title="Permanent link">#</a></h1>
 <p>Lets get started</p>
 <p><img alt="VSCode" height="150px" src="../assets/images/logos/code.png" />    <img alt="" height="150px" src="../assets/images/logos/wpilib.png" /></p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
@@ -748,9 +744,42 @@
 <p><img alt="" src="../assets/images/new_project/project/step_6.png" /></p>
 </div>
 <h3 id="default-project-contents">Default Project Contents<a class="headerlink" href="#default-project-contents" title="Permanent link">#</a></h3>
+<p>Newly created projects have many files within them. We only care about the contents within the <strong>src/main/java/frc/robot/</strong> folder. Everything else can be ignored at this point in the tutorial.</p>
+<p><strong>Files in the robot folder:</strong></p>
+<ul>
+<li><strong>ExampleCommand.java</strong><ul>
+<li>An example Command</li>
+</ul>
+</li>
+<li><strong>ExampleSubsystem.java</strong><ul>
+<li>An example SubSystem</li>
+</ul>
+</li>
+<li><strong>Main.java</strong><ul>
+<li>Used for advanced programming </li>
+<li>Will be ignored/left as is for this tutorial</li>
+</ul>
+</li>
+<li><strong>OI.java</strong><ul>
+<li>Used to create a connection between commands and Operator Interfaces (OI) such as Joysticks or buttons</li>
+</ul>
+</li>
+<li><strong>Robot.java</strong><ul>
+<li>Used to declare our subsystem</li>
+<li>Used to run special methods in the init and period phases of the auto, teleop, and disabled states</li>
+</ul>
+</li>
+<li><strong>RobotMap.java</strong><ul>
+<li>Used to map physical ports (digital if using the CAN bus) to variables in the code</li>
+</ul>
+</li>
+</ul>
+<details class="example"><summary>Example</summary><p><img alt="" src="../assets/images/new_project/default_contents.png" /></p>
+</details>
+<hr />
 <h2 id="creating-a-new-subsystem">Creating a New Subsystem<a class="headerlink" href="#creating-a-new-subsystem" title="Permanent link">#</a></h2>
 <div class="admonition summary">
-<p>1) Double click on the <strong>src</strong> folder to expand it.<br />
+<p>1) Click on the <strong>src</strong> folder to expand it.<br />
 2) Do the same for <strong>subsystems</strong></p>
 <p><img alt="" src="../assets/images/new_project/subsystem/step_1.png" /></p>
 </div>
@@ -778,23 +807,23 @@ We have created a new subsystem but we have not yet linked it to Robot.java.  </
 </div>
 </div>
 <div class="admonition summary">
-<p>1) In Robot.java we will create a new <strong>global</strong> variable of type <code>DesiredSubsystemName</code> (i.e. <code>Drivetrain</code>) named <code class="highlight"><span class="n">m_desiredSubsystemName</span></code> (<code>i.e. m_drivetrain</code>) and set its value to <code>null</code>.  </p>
-<p><img alt="" src="../assets/images/new_project/project/step_1.png" /></p>
+<p>1) In Robot.java we will create a new <strong>global</strong> variable of type <code>DesiredSubsystemName</code> (i.e. <code>Drivetrain</code>) named <code class="codehilite"><span class="n">m_desiredSubsystemName</span></code> (<code>i.e. m_drivetrain</code>) and set its value to <code>null</code>.  </p>
+<p><img alt="" src="../assets/images/new_project/subsystem/step_6.png" /></p>
 </div>
 <div class="admonition summary">
-<p>2) In the <code>robotInit()</code> method add: <code class="highlight"><span class="n">m_desiredSubsystemName</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DesiredSubsystemName</span><span class="o">();</span></code> (i.e. <code class="highlight"><span class="n">m_drivetrain</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Drivetrain</span><span class="o">();</span></code>)</p>
+<p>2) In the <code>robotInit()</code> method add: <code class="codehilite"><span class="n">m_desiredSubsystemName</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DesiredSubsystemName</span><span class="o">();</span></code> (i.e. <code class="codehilite"><span class="n">m_drivetrain</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Drivetrain</span><span class="o">();</span></code>)</p>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
 <p>This must always be done above <strong>OI</strong> and <strong>Telemetry/SmartDashboard</strong> (if present).</p>
 </div>
-<p><img alt="" src="../assets/images/new_project/project/step_1.png" /></p>
+<p><img alt="" src="../assets/images/new_project/subsystem/step_7.png" /></p>
 </div>
-<p>Now when we use this subsystem in commands, we must call <code class="highlight"><span class="n">Robot</span><span class="o">.</span><span class="na">m_desiredSubsystemName</span><span class="o">.</span></code> to get access to it and its methods. (i.e. <code class="highlight"><span class="n">Robot</span><span class="o">.</span><span class="na">m_drivetrain</span><span class="o">.</span><span class="na">someMethod</span><span class="o">()</span></code>)</p>
-<h3 id="default-subsytem-contents">Default Subsytem Contents<a class="headerlink" href="#default-subsytem-contents" title="Permanent link">#</a></h3>
+<p>Now when we use this subsystem in commands, we must call <code class="codehilite"><span class="n">Robot</span><span class="o">.</span><span class="na">m_desiredSubsystemName</span><span class="o">.</span></code> to get access to it and its methods. (i.e. <code class="codehilite"><span class="n">Robot</span><span class="o">.</span><span class="na">m_drivetrain</span><span class="o">.</span><span class="na">someMethod</span><span class="o">()</span></code>)</p>
+<h3 id="default-subsystem-contents">Default Subsystem Contents<a class="headerlink" href="#default-subsystem-contents" title="Permanent link">#</a></h3>
+<p>Newly created subsystems are empty with the exception of the initDefaultCommand.</p>
 <ul>
-<li>Newly created subsystems are empty with the exception of the initDefaultCommand.</li>
-<li>We will create a constructor ourselves later.</li>
-<li>initDefaultCommand - a command that will run automatically every time the subsystem is called.<ul>
+<li>Currently there is no constructor, we will create a constructor ourselves later.</li>
+<li><strong>initDefaultCommand</strong> - a command that will run automatically every time the subsystem is called.<ul>
 <li>When another command that requires the same subsystem is called, the initDefaultCommand will stop and restart after the new command has finished.<ul>
 <li>This process calls the interrupted method of the command being called initDefaultCommand</li>
 </ul>
@@ -802,13 +831,29 @@ We have created a new subsystem but we have not yet linked it to Robot.java.  </
 </ul>
 </li>
 </ul>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><img alt="" src="../assets/images/new_project/new_subsystem.png" /></p>
-</div>
+<details class="example"><summary>Example</summary><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">frc.robot.subsystems</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">edu.wpi.first.wpilibj.command.Subsystem</span><span class="o">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Add your docs here.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Drivetrain</span> <span class="kd">extends</span> <span class="n">Subsystem</span> <span class="o">{</span>
+  <span class="c1">// Put methods for controlling this subsystem</span>
+  <span class="c1">// here. Call these from Commands.</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">initDefaultCommand</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Set the default command for a subsystem here.</span>
+    <span class="c1">// setDefaultCommand(new MySpecialCommand());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+</details>
 <h2 id="creating-a-new-command">Creating a New Command<a class="headerlink" href="#creating-a-new-command" title="Permanent link">#</a></h2>
 <div class="admonition summary">
-<p>1) Double click on the <strong>src</strong> folder to expand it.<br />
+<p>1) Click on the <strong>src</strong> folder to expand it (if it isn't already).<br />
 2) Do the same for <strong>commands</strong></p>
 <p><img alt="" src="../assets/images/new_project/command/step_1.png" /></p>
 </div>
@@ -826,18 +871,19 @@ We have created a new subsystem but we have not yet linked it to Robot.java.  </
 <p><img alt="" src="../assets/images/new_project/command/step_5.png" /></p>
 </div>
 <h3 id="default-command-contents">Default Command Contents<a class="headerlink" href="#default-command-contents" title="Permanent link">#</a></h3>
+<p>Newly created commands have some predefined methods in them specific for a command based robot.</p>
 <ul>
 <li><strong>Constructor</strong> - Called when the robot program is <strong><em>FIRST</em></strong> loaded.<ul>
 <li>Subsystem dependencies are declared here.</li>
 </ul>
 </li>
-<li><strong>Initialize</strong> - Called <strong><em>ONCE</em></strong> just before this Command runs the first time.</li>
-<li><strong>Execute</strong> - Called <strong><em>REPEATEDLY</em></strong> when this Command is scheduled to run</li>
-<li><strong>isFinished</strong> - Make this return <strong><em>TRUE</em></strong> when this Command no longer needs to run <code>execute()</code> (initialize always runs once regardless). </li>
-<li><strong>End</strong> - Called <strong><em>ONCE</em></strong> after isFinished returns true</li>
-<li><strong>Interrupted</strong> - Called when <strong><em>another command</em></strong> which requires one or more of the same subsystems is scheduled to run</li>
+<li><strong>initialize()</strong> - Called <strong><em>ONCE</em></strong> just before this Command runs the first time.</li>
+<li><strong>execute()</strong> - Called <strong><em>REPEATEDLY</em></strong> when this Command is scheduled to run</li>
+<li><strong>isFinished()</strong> - Make this return <strong><em>TRUE</em></strong> when this Command no longer needs to run <code>execute()</code> (initialize always runs once regardless). </li>
+<li><strong>end()</strong> - Called <strong><em>ONCE</em></strong> after isFinished returns true</li>
+<li><strong>interrupted()</strong> - Called when <strong><em>another command</em></strong> which requires one or more of the same subsystems is scheduled to run</li>
 </ul>
-<details class="example"><summary>Example</summary><div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">frc.robot.commands</span><span class="o">;</span>
+<details class="example"><summary>Example</summary><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">frc.robot.commands</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">edu.wpi.first.wpilibj.command.Command</span><span class="o">;</span>
 
@@ -897,7 +943,7 @@ We have created a new subsystem but we have not yet linked it to Robot.java.  </
 	<div class="md-footer-nav">
 		<nav class="md-footer-nav__inner md-grid">
 			
-			<a href="../setup/install_software.html" title="**WIP** Installing Necessary Software"
+			<a href="../setup/install_software.html" title="Installing Necessary Software"
 				class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
 				<div class="md-flex__cell md-flex__cell--shrink">
 					<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
@@ -907,7 +953,7 @@ We have created a new subsystem but we have not yet linked it to Robot.java.  </
 						<span class="md-footer-nav__direction">
 							Previous
 						</span>
-						**WIP** Installing Necessary Software
+						Installing Necessary Software
 					</span>
 				</div>
 			</a>

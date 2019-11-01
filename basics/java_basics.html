@@ -365,6 +365,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#constants" title="Constants" class="md-nav__link">
+    Constants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#scope" title="Scope" class="md-nav__link">
     Scope
   </a>
@@ -409,6 +416,18 @@
   <li class="md-nav__item">
     <a href="wpilib.html" title="WPILib Programming Basics" class="md-nav__link">
       WPILib Programming Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vscode_tips.html" title="Visual Studio Code Tips" class="md-nav__link">
+      Visual Studio Code Tips
     </a>
   </li>
 
@@ -493,90 +512,6 @@
   <li class="md-nav__item">
     <a href="../programming/driving_robot.html" title="**WIP** Creating a Basic Driving Robot" class="md-nav__link">
       **WIP** Creating a Basic Driving Robot
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../programming/pneumatics.html" title="**WIP** Using Pneumatics" class="md-nav__link">
-      **WIP** Using Pneumatics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../programming/using_sensors.html" title="**WIP** Using Sensors and Switches" class="md-nav__link">
-      **WIP** Using Sensors and Switches
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../programming/shuffleboard.html" title="**WIP** Using Shuffleboard" class="md-nav__link">
-      **WIP** Using Shuffleboard
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../programming/robotpreferences.html" title="**WIP** Using RobotPreferences" class="md-nav__link">
-      **WIP** Using RobotPreferences
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../programming/autonomous.html" title="**WIP** Creating an Autonomous Command" class="md-nav__link">
-      **WIP** Creating an Autonomous Command
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../programming/pid.html" title="**WIP** Getting started with PID" class="md-nav__link">
-      **WIP** Getting started with PID
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../programming/super_core.html" title="**WIP** Using SuperCORE" class="md-nav__link">
-      **WIP** Using SuperCORE
     </a>
   </li>
 
@@ -674,6 +609,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#constants" title="Constants" class="md-nav__link">
+    Constants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#scope" title="Scope" class="md-nav__link">
     Scope
   </a>
@@ -729,6 +671,7 @@
 <li><code class="codehilite"><span class="kd">private</span></code> - an object only accessible by its containing class (file).</li>
 <li><code class="codehilite"><span class="kd">protected</span></code> - like private but can be seen by subclasses</li>
 <li><code class="codehilite"><span class="k">return</span></code> - value to return or give back after method execution (run). void - a method that returns no value</li>
+<li><code class="codehilite"><span class="kc">null</span></code> - a value that means empty or nothing</li>
 </ul>
 </li>
 </ul>
@@ -753,12 +696,17 @@ main loads class1, class1 loads class2</div>
 <li>Classes can also <strong>call</strong> (use) variables or methods of other classes if those have been set to public.</li>
 </ul>
 <h3 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">#</a></h3>
-<p><!-- TODO: Add info about keyword new -->
-- Classes can also have a <strong><em>constructor</em></strong> which is a special type of <strong>method</strong> that has the <strong>same name (case sensitive)</strong> as the class file
-    - Constructors are always called when the class is loaded into the program for the first time. This is often the only time they are called.
-    - Constructors are called when trying to access the class in other files.
-    - They can be called again if the class is programmed to be unloaded (destroyed) and reloaded.
-    - Calls to methods, and assignment of values, within the constructor will run as soon as the class is called (loaded) in the code.</p>
+<!-- TODO: Add info about keyword new -->
+
+<ul>
+<li>Classes can also have a <strong><em>constructor</em></strong> which is a special type of <strong>method</strong> that has the <strong>same name (case sensitive)</strong> as the class file<ul>
+<li>Constructors are always called when the class is loaded into the program for the first time. This is often the only time they are called.</li>
+<li>Constructors are called when trying to access the class in other files.</li>
+<li>They can be called again if the class is programmed to be unloaded (destroyed) and reloaded.</li>
+<li>Calls to methods, and assignment of values, within the constructor will run as soon as the class is called (loaded) in the code.</li>
+</ul>
+</li>
+</ul>
 <hr />
 <h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h2>
 <ul>
@@ -792,21 +740,44 @@ main loads class1, class1 loads class2</div>
 </details>
 <hr />
 <h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">#</a></h2>
-<p><!-- TODO: Add note about constants -->
-- Variables are objects that contain data, they are characterized by data types
-- Variables are assigned names and data types on creation
-    - Names can be anything with the exception of pre-existing keywords such as <code>public</code> or <code>int</code>
-- Data types define what type of data is being stored in the variables:
-    - <code class="codehilite"><span class="kt">int</span></code> - integers (whole numbers)
-    - <code class="codehilite"><span class="kt">double</span></code> - double precision floating point (fractional/decimal values) 
-    - <code class="codehilite"><span class="kt">boolean</span></code> - true or false (true = 1 or false = 0) values.
-    - <code class="codehilite"><span class="n">string</span></code> - text values contained in parentheses
-    - !!! Example "Example: <code class="codehilite"><span class="kt">int</span> <span class="n">sum</span><span class="o">;</span></code>"
-        A variable that can hold whole number values
-    - !!! Example "Example: <code class="codehilite"><span class="kt">boolean</span> <span class="n">isFull</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span></code>"
-        A variable can either hold a true or false value and is being assigned a true value</p>
 <ul>
-<li>Most non-static variables can have their values assigned or assigned at any point elsewhere in your program</li>
+<li>Variables are objects that contain data, they are characterized by data types</li>
+<li>Variables are assigned names and data types on creation<ul>
+<li>Names can be anything with the exception of pre-existing keywords such as <code>public</code> or <code>int</code></li>
+</ul>
+</li>
+<li>Data types define what type of data is being stored in the variables:<ul>
+<li><code class="codehilite"><span class="kt">int</span></code> - integers (whole numbers)</li>
+<li><code class="codehilite"><span class="kt">double</span></code> - double precision floating point (fractional/decimal values) </li>
+<li><code class="codehilite"><span class="kt">boolean</span></code> - true or false (true = 1 or false = 0) values.</li>
+<li><code class="codehilite"><span class="n">string</span></code> - text values contained in parentheses</li>
+<li>
+<div class="admonition example">
+<p class="admonition-title">Example: <code class="codehilite"><span class="kt">int</span> <span class="n">sum</span><span class="o">;</span></code></p>
+A variable that can hold whole number values</div>
+</li>
+<li>
+<div class="admonition example">
+<p class="admonition-title">Example: <code class="codehilite"><span class="kt">boolean</span> <span class="n">isFull</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span></code></p>
+A variable can either hold a true or false value and is being assigned a true value</div>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="constants">Constants<a class="headerlink" href="#constants" title="Permanent link">#</a></h3>
+<p>Most variables can have their values assigned or reassigned at any point elsewhere in your program. To avoid having a variable change its value during runtime you can make it a <strong>constant</strong></p>
+<ul>
+<li>In Java you can create constants using the <code class="codehilite"><span class="kd">static</span> <span class="kd">final</span></code> keywords together in front of the data type of the variable<ul>
+<li>The static modifier causes the variable to be available without loading an the class where it is defined. </li>
+<li>The final modifier causes the variable to be unchangeable.</li>
+<li>Java constants are normally declared in ALL CAPS. Words in Java constants are normally separated by underscores.</li>
+<li>
+<div class="admonition example">
+<p class="admonition-title">Example: <code class="codehilite"><span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">double</span> <span class="n">PI_VALUE</span> <span class="o">=</span> <span class="mf">3.14159</span><span class="o">;</span></code></p>
+A variable that cannot be modified during code run time.</div>
+</li>
+</ul>
+</li>
 </ul>
 <h3 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">#</a></h3>
 <ul>

@@ -299,6 +299,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basics/vscode_tips.html" title="Visual Studio Code Tips" class="md-nav__link">
+      Visual Studio Code Tips
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -417,6 +429,47 @@
     Creating the Drivetrain Subsystem
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-will-be-added-to-the-drivetrain" title="What will be added to the Drivetrain" class="md-nav__link">
+    What will be added to the Drivetrain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-talon-variables" title="Creating the Talon Variables" class="md-nav__link">
+    Creating the Talon Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-and-filling-the-constructor" title="Creating and filling the constructor" class="md-nav__link">
+    Creating and filling the constructor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-robotmap" title="Using RobotMap" class="md-nav__link">
+    Using RobotMap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-our-robot-controllable" title="Making our robot controllable" class="md-nav__link">
+    Making our robot controllable
+  </a>
+  
 </li>
       
       
@@ -427,90 +480,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="pneumatics.html" title="**WIP** Using Pneumatics" class="md-nav__link">
-      **WIP** Using Pneumatics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="using_sensors.html" title="**WIP** Using Sensors and Switches" class="md-nav__link">
-      **WIP** Using Sensors and Switches
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="shuffleboard.html" title="**WIP** Using Shuffleboard" class="md-nav__link">
-      **WIP** Using Shuffleboard
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="robotpreferences.html" title="**WIP** Using RobotPreferences" class="md-nav__link">
-      **WIP** Using RobotPreferences
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="autonomous.html" title="**WIP** Creating an Autonomous Command" class="md-nav__link">
-      **WIP** Creating an Autonomous Command
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="pid.html" title="**WIP** Getting started with PID" class="md-nav__link">
-      **WIP** Getting started with PID
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="super_core.html" title="**WIP** Using SuperCORE" class="md-nav__link">
-      **WIP** Using SuperCORE
-    </a>
   </li>
 
         
@@ -563,6 +532,47 @@
     Creating the Drivetrain Subsystem
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-will-be-added-to-the-drivetrain" title="What will be added to the Drivetrain" class="md-nav__link">
+    What will be added to the Drivetrain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-talon-variables" title="Creating the Talon Variables" class="md-nav__link">
+    Creating the Talon Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-and-filling-the-constructor" title="Creating and filling the constructor" class="md-nav__link">
+    Creating and filling the constructor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-robotmap" title="Using RobotMap" class="md-nav__link">
+    Using RobotMap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-our-robot-controllable" title="Making our robot controllable" class="md-nav__link">
+    Making our robot controllable
+  </a>
+  
 </li>
       
       
@@ -585,7 +595,9 @@
                 
                 
                 <h1 id="wip-creating-a-basic-driving-robot"><strong>WIP</strong> Creating a Basic Driving Robot<a class="headerlink" href="#wip-creating-a-basic-driving-robot" title="Permanent link">#</a></h1>
-<p>Lets get moving</p>
+<!-- TODO: Maybe split this into different pages -->
+
+<p>Lets get moving!</p>
 <p><img alt="Image Title" src="../assets/images/driving_robot/kitbot.jpg" /></p>
 <blockquote>
 <p><a href="http://ljrobotics.org/games/power-up-2018/" target="_blank">Picture source: Team 2984</a></p>
@@ -601,6 +613,296 @@
 </ol>
 <hr />
 <h2 id="creating-the-drivetrain-subsystem">Creating the Drivetrain Subsystem<a class="headerlink" href="#creating-the-drivetrain-subsystem" title="Permanent link">#</a></h2>
+<p>Before we begin we must create the class file for the drivetrain subsystem. See <a href="new_project.html#creating-a-new-subsystem" target="_blank">Creating a New Subsystem</a> for info on how to do this.</p>
+<h3 id="what-will-be-added-to-the-drivetrain">What will be added to the Drivetrain<a class="headerlink" href="#what-will-be-added-to-the-drivetrain" title="Permanent link">#</a></h3>
+<p>In the Drivetrain class we will tell the subsystem what type of components it will be using.</p>
+<ul>
+<li>A Drivetrain needs motor controllers. In our case we will use 4 Talon SRs (a brand of controller for motors).<ul>
+<li>You could use other motor controllers such as Victor SPs or Talon SRXs but we will be using Talon SRs</li>
+<li>If you are, replace Talon with TalonSRX, Victor, or VictorSP in the code you write depending on the type you use.</li>
+<li>You can use 2 motors (left and right), but for this tutorial we will use 4.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip<p>Be sure to read <a href="../basics/vscode_tips.html" target="_blank">Visual Studio Code Tips</a> before getting started! It will make your life a lot easier.</p>
+</p>
+</div>
+<h3 id="creating-the-talon-variables">Creating the Talon Variables<a class="headerlink" href="#creating-the-talon-variables" title="Permanent link">#</a></h3>
+<div class="admonition summary">
+<p><strong>1)</strong> Create 4 global variables of data type <strong>Talon</strong> and name them: <code>leftFrontTalon</code>, <code>rightFrontTalon</code>, <code>leftBackTalon</code>, <code>rightBackTalon</code></p>
+<ul>
+<li>To get started type the word Talon followed by the name i.e. <code class="codehilite"><span class="n">Talon</span> <span class="n">leftFrontTalon</span><span class="o">;</span></code></li>
+<li>These will eventually hold the object values for Talons and their port numbers.</li>
+</ul>
+</div>
+<div class="admonition summary">
+<p><strong>2)</strong> Next assign their values to <code class="codehilite"><span class="kc">null</span></code> (<a href="../basics/java_basics.html#overview" target="_blank">more info on <code>null</code></a>).</p>
+<ul>
+<li>We do this to make sure it is empty at this point. </li>
+<li>When we assign these variables a value, we will be getting the motor controller's port numbers out of RobotMap<ul>
+<li>This means we cannot assign them at the global level</li>
+</ul>
+</li>
+</ul>
+</div>
+<details class="example"><summary>Example</summary><p>The code you typed should be this:</p>
+<div class="codehilite"><pre><span></span><span class="n">Talon</span> <span class="n">leftFrontTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<span class="n">Talon</span> <span class="n">leftBackTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<span class="n">Talon</span> <span class="n">rightFrontTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<span class="n">Talon</span> <span class="n">rightBackTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</pre></div>
+
+<p>Your full <strong>Drivetrain.java</strong> should look like this:</p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">frc.robot.subsystems</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">edu.wpi.first.wpilibj.Talon</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">edu.wpi.first.wpilibj.command.Subsystem</span><span class="o">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Add your docs here.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Drivetrain</span> <span class="kd">extends</span> <span class="n">Subsystem</span> <span class="o">{</span>
+  <span class="c1">// Put methods for controlling this subsystem</span>
+  <span class="c1">// here. Call these from Commands.</span>
+
+  <span class="n">Talon</span> <span class="n">leftFrontTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="n">Talon</span> <span class="n">leftBackTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="n">Talon</span> <span class="n">rightFrontTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="n">Talon</span> <span class="n">rightBackTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">initDefaultCommand</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Set the default command for a subsystem here.</span>
+    <span class="c1">// setDefaultCommand(new MySpecialCommand());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+</details>
+<!-- TODO: Generalize this more -->
+
+<details class="warning"><summary>If an error occurs (red squiggles)</summary><ol>
+<li>Click the word Talon
+<img alt="" src="../assets/images/driving_robot/e1.png" /></li>
+<li>💡 Click the light bulb<br />
+<img alt="" src="../assets/images/driving_robot/e2.png" /></li>
+<li>Select "Import 'Talon' (edu.wpi.first.wpilibj)"
+<img alt="" src="../assets/images/driving_robot/e3.png" /></li>
+<li>Your error should be gone!</li>
+</ol>
+</details>
+<h3 id="creating-and-filling-the-constructor">Creating and filling the constructor<a class="headerlink" href="#creating-and-filling-the-constructor" title="Permanent link">#</a></h3>
+<div class="admonition summary">
+<p><strong>1)</strong> Create the constructor for Drivetrain.java (<a href="../basics/java_basics.html#constructors" target="_blank">more info on constructors</a>)</p>
+<ul>
+<li>The constructor is where we will assign values to our talon variables.</li>
+</ul>
+</div>
+<div class="admonition summary">
+<p>Now that we have created the Talons we must initialize them and tell them what port on the roboRIO they are on.</p>
+<p><strong>2)</strong> Initialize (set value of) <code>leftFrontTalon</code> to <code class="codehilite"><span class="k">new</span> <span class="n">Talon</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span></code>. </p>
+<ul>
+<li>This initializes a new talon, <code>leftFrontTalon</code>, in a new piece of memory and states it is on port 0 of the roboRIO. </li>
+<li>This should be done within the constructor <code class="codehilite"><span class="n">Drivetrain</span><span class="o">()</span></code></li>
+<li>
+<p>This calls the constructor <code class="codehilite"><span class="n">Talon</span><span class="o">(</span><span class="kt">int</span><span class="o">)</span></code> in the Talon class. </p>
+<ul>
+<li>The constructor <code class="codehilite"><span class="n">Talon</span><span class="o">(</span><span class="kt">int</span><span class="o">)</span></code> takes a variable of type <code class="codehilite"><span class="kt">int</span></code>. In this case the <code class="codehilite"><span class="kt">int</span></code> (integer) refers to the port number on the roboRIO. </li>
+</ul>
+<details class="info"><summary>roboRIO port diagram</summary><p><img alt="" src="../assets/images/driving_robot/roboRIO_port.png" /></p>
+</details>
+</li>
+</ul>
+</div>
+<details class="example"><summary>Example</summary><p>The code you typed should be this:</p>
+<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="nf">Drivetrain</span><span class="o">()</span> <span class="o">{</span>
+  <span class="c1">// Talons</span>
+  <span class="n">leftFrontTalon</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Talon</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+
+<p>Your full <strong>Drivetrain.java</strong> should look like this:</p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">frc.robot.subsystems</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">edu.wpi.first.wpilibj.Talon</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">edu.wpi.first.wpilibj.command.Subsystem</span><span class="o">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Add your docs here.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Drivetrain</span> <span class="kd">extends</span> <span class="n">Subsystem</span> <span class="o">{</span>
+  <span class="c1">// Put methods for controlling this subsystem</span>
+  <span class="c1">// here. Call these from Commands.</span>
+
+  <span class="n">Talon</span> <span class="n">leftFrontTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="n">Talon</span> <span class="n">leftBackTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="n">Talon</span> <span class="n">rightFrontTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="n">Talon</span> <span class="n">rightBackTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="nf">Drivetrain</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Talons</span>
+    <span class="n">leftFrontTalon</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Talon</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">initDefaultCommand</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Set the default command for a subsystem here.</span>
+    <span class="c1">// setDefaultCommand(new MySpecialCommand());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+</details>
+<h3 id="using-robotmap">Using RobotMap<a class="headerlink" href="#using-robotmap" title="Permanent link">#</a></h3>
+<!-- TODO: Link this as example where robot map mentioned -->
+
+<p>Since each subsystem has its own components with their own ports, it is easy to lose track of which ports are being used and for what. To counter this you can use a class called <strong>RobotMap</strong> to hold all these values in a single location.</p>
+<div class="admonition summary">
+<p><strong>1)</strong> To use RobotMap, instead of putting <code>0</code> for the port on the Talon type: 
+<div class="codehilite"><pre><span></span><span class="n">RobotMap</span><span class="o">.</span><span class="na">DRIVETRAIN_LEFT_FRONT_TALON</span>
+</pre></div></p>
+<ul>
+<li>Names should follow the pattern SUBSYSTEM_NAME_OF_COMPONENT</li>
+<li>The name is all caps since it is a <strong>constant</strong> (<a href="../basics/java_basics.html#constants" target="_blank">more info on constants</a>).</li>
+</ul>
+</div>
+<div class="admonition summary">
+<p><strong>2)</strong> Click on the underlined text 
+<img alt="" src="../assets/images/driving_robot/robotmap/step_1.png" /></p>
+</div>
+<div class="admonition summary">
+<p><strong>3)</strong> Click on the 💡light bulb and select “create constant…”
+<img alt="" src="../assets/images/driving_robot/robotmap/step_2.png" /></p>
+</div>
+<div class="admonition summary">
+<p><strong>4)</strong> Click on RobotMap.java tab that just popped up
+<img alt="" src="../assets/images/driving_robot/robotmap/step_3.png" />  </p>
+</div>
+<div class="admonition summary">
+<p><strong>5)</strong> Change the <code>0</code> to the correct port for that motor controller on your robot/roboRIO
+<img alt="" src="../assets/images/driving_robot/robotmap/step_4.png" /></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong><em>If you set this to the wrong value, you could damage your robot when it tries to move!</em></strong></p>
+</div>
+</div>
+<div class="admonition summary">
+<p><strong>6)</strong> Repeat these steps for the remaining Talons.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember to save both <strong>Drivetrain.java</strong> and <strong>RobotMap.java</strong></p>
+</div>
+</div>
+<details class="example"><summary>Example</summary><p>The code you type should be this:</p>
+<div class="codehilite"><pre><span></span><span class="n">leftFrontTalon</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Talon</span><span class="o">(</span><span class="n">RobotMap</span><span class="o">.</span><span class="na">DRIVETRAIN_LEFT_FRONT_TALON</span><span class="o">);</span>
+</pre></div>
+
+<p>Your full <strong>Drivetrain.java</strong> should look like this:</p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">frc.robot.subsystems</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">edu.wpi.first.wpilibj.Talon</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">edu.wpi.first.wpilibj.command.Subsystem</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">frc.robot.RobotMap</span><span class="o">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Add your docs here.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Drivetrain</span> <span class="kd">extends</span> <span class="n">Subsystem</span> <span class="o">{</span>
+  <span class="c1">// Put methods for controlling this subsystem</span>
+  <span class="c1">// here. Call these from Commands.</span>
+
+  <span class="n">Talon</span> <span class="n">leftFrontTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="n">Talon</span> <span class="n">leftBackTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="n">Talon</span> <span class="n">rightFrontTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="n">Talon</span> <span class="n">rightBackTalon</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="nf">Drivetrain</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Talons</span>
+    <span class="n">leftFrontTalon</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Talon</span><span class="o">(</span><span class="n">RobotMap</span><span class="o">.</span><span class="na">DRIVETRAIN_LEFT_FRONT_TALON</span><span class="o">);</span>
+    <span class="n">leftBackTalon</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Talon</span><span class="o">(</span><span class="n">RobotMap</span><span class="o">.</span><span class="na">DRIVETRAIN_LEFT_BACK_TALON</span><span class="o">);</span>
+    <span class="n">rightFrontTalon</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Talon</span><span class="o">(</span><span class="n">RobotMap</span><span class="o">.</span><span class="na">DRIVETRAIN_RIGHT_FRONT_TALON</span><span class="o">);</span>
+    <span class="n">rightBackTalon</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Talon</span><span class="o">(</span><span class="n">RobotMap</span><span class="o">.</span><span class="na">DRIVETRAIN_RIGHT_BACK_TALON</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">initDefaultCommand</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Set the default command for a subsystem here.</span>
+    <span class="c1">// setDefaultCommand(new MySpecialCommand());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+<p>Your full <strong>RobotMap.java</strong> should look similar to this:    </p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">frc.robot</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RobotMap</span> <span class="o">{</span>
+  <span class="c1">// Talons</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">DRIVETRAIN_LEFT_FRONT_TALON</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">DRIVETRAIN_LEFT_BACK_TALON</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">DRIVETRAIN_RIGHT_FRONT_TALON</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">DRIVETRAIN_RIGHT_BACK_TALON</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Remember to use the values for <strong>YOUR</strong> specific robot or you could risk damaging it!</p>
+</div>
+</details>
+<h2 id="making-our-robot-controllable">Making our robot controllable<a class="headerlink" href="#making-our-robot-controllable" title="Permanent link">#</a></h2>
+<!-- TODO: Decide on order of this -->
+
+<p>In order to drive our robot, it needs to know what will be controlling it. To do so we will create a new joystick in OI.java</p>
+<div class="admonition summary">
+<p><strong>1)</strong> Open OI.java</p>
+<p><strong>2)</strong> Type: 
+<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="n">Joystick</span> <span class="n">driverController</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Joystick</span><span class="o">(</span><span class="n">RobotMap</span><span class="o">.</span><span class="na">OI_DRIVER_CONTROLLER</span><span class="o">);</span>
+</pre></div></p>
+<!-- TODO: Change this to a general fix imports -->
+
+<ul>
+<li>Import any classes if necessary such as: <code class="codehilite"><span class="kn">import</span> <span class="nn">edu.wpi.first.wpilibj.Joystick</span><span class="o">;</span></code> </li>
+<li>A variable <code>driverController</code> of type Joystick pointing to a joystick on port <code>OI_DRIVER_CONTROLLER</code> from <strong>RobotMap</strong></li>
+</ul>
+<p><strong>3)</strong> Click the 💡 light bulb to create a new <strong>CONSTANT</strong> and set the value to the port number the joystick uses on the laptop (this can be found in the Driverstation software).</p>
+</div>
+<!-- TODO: add details on how to find joystick port in driverstation tips -->
+
+<details class="example"><summary>Example</summary><p>The code you type should be this:</p>
+<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="n">Joystick</span> <span class="n">driverController</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Joystick</span><span class="o">(</span><span class="n">RobotMap</span><span class="o">.</span><span class="na">OI_DRIVER_CONTROLLER</span><span class="o">);</span>
+</pre></div>
+
+<p>Your full <strong>OI.java</strong> should look like this:</p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">frc.robot</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">edu.wpi.first.wpilibj.Joystick</span><span class="o">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * This class is the glue that binds the controls on the physical operator</span>
+<span class="cm"> * interface to the commands and command groups that allow control of the robot.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">OI</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="n">Joystick</span> <span class="n">driverController</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Joystick</span><span class="o">(</span><span class="n">RobotMap</span><span class="o">.</span><span class="na">OI_DRIVER_CONTROLLER</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+
+<p>Your full <strong>RobotMap.java</strong> should look similar to this:    </p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">frc.robot</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RobotMap</span> <span class="o">{</span>
+  <span class="c1">// Talons</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">DRIVETRAIN_LEFT_FRONT_TALON</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">DRIVETRAIN_LEFT_BACK_TALON</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">DRIVETRAIN_RIGHT_FRONT_TALON</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">DRIVETRAIN_RIGHT_BACK_TALON</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+
+  <span class="c1">// Joysticks</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">OI_DRIVER_CONTROLLER</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+
+</details>
                 
                   
                 
@@ -637,14 +939,14 @@
 			</a>
 			
 			
-			<a href="pneumatics.html" title="**WIP** Using Pneumatics"
+			<a href="../contributing.html" title="Contributing"
 				class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
 				<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 					<span class="md-flex__ellipsis">
 						<span class="md-footer-nav__direction">
 							Next
 						</span>
-						**WIP** Using Pneumatics
+						Contributing
 					</span>
 				</div>
 				<div class="md-flex__cell md-flex__cell--shrink">

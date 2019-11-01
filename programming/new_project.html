@@ -299,6 +299,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basics/vscode_tips.html" title="Visual Studio Code Tips" class="md-nav__link">
+      Visual Studio Code Tips
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -490,90 +502,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="pneumatics.html" title="**WIP** Using Pneumatics" class="md-nav__link">
-      **WIP** Using Pneumatics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="using_sensors.html" title="**WIP** Using Sensors and Switches" class="md-nav__link">
-      **WIP** Using Sensors and Switches
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="shuffleboard.html" title="**WIP** Using Shuffleboard" class="md-nav__link">
-      **WIP** Using Shuffleboard
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="robotpreferences.html" title="**WIP** Using RobotPreferences" class="md-nav__link">
-      **WIP** Using RobotPreferences
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="autonomous.html" title="**WIP** Creating an Autonomous Command" class="md-nav__link">
-      **WIP** Creating an Autonomous Command
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="pid.html" title="**WIP** Getting started with PID" class="md-nav__link">
-      **WIP** Getting started with PID
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="super_core.html" title="**WIP** Using SuperCORE" class="md-nav__link">
-      **WIP** Using SuperCORE
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -714,36 +642,39 @@
 <li><a href="#creating-a-new-subsystem">Creating a New Subsystem</a></li>
 <li><a href="#creating-a-new-command">Creating a New Command</a></li>
 </ul>
+<hr />
 <h2 id="creating-a-new-project">Creating a New Project<a class="headerlink" href="#creating-a-new-project" title="Permanent link">#</a></h2>
 <div class="admonition summary">
-<p>1) Select the <strong>W icon</strong> from the tab bar or use the shortcut by holding down <strong>Ctrl+Shift+P</strong> at the same time. (Replace ctrl with command on macOS)  </p>
+<p><strong>1)</strong> Select the <strong>W icon</strong> from the tab bar or use the shortcut by holding down <strong>Ctrl+Shift+P</strong> at the same time. (Replace ctrl with command on macOS)  </p>
 <p><img alt="" src="../assets/images/new_project/project/step_1.png" /></p>
 </div>
 <div class="admonition summary">
-<p>2) Type and hit enter or select <strong>WPILib: Create a new project</strong></p>
+<p><strong>2)</strong> Type and hit enter or select <strong>WPILib: Create a new project</strong></p>
 <p><img alt="" src="../assets/images/new_project/project/step_2.png" /></p>
 </div>
 <div class="admonition summary">
-<p>3) Click <strong>Select a Project Type</strong> and choose <strong>Template</strong><br />
-4) Click <strong>Select a Language</strong> and choose <strong>Java</strong><br />
-5) Click <strong>Select a project base</strong> and choose <strong>Command Robot</strong>  </p>
+<p><strong>3)</strong> Click <strong>Select a Project Type</strong> and choose <strong>Template</strong><br />
+<strong>4)</strong> Click <strong>Select a Language</strong> and choose <strong>Java</strong><br />
+<strong>5)</strong> Click <strong>Select a project base</strong> and choose <strong>Command Robot</strong>  </p>
 <p><img alt="" src="../assets/images/new_project/project/step_3.png" /></p>
 </div>
 <div class="admonition summary">
-<p>6) Click <strong>Select a new project folder</strong> and choose where on your computer you would like to store the program</p>
+<p><strong>6)</strong> Click <strong>Select a new project folder</strong> and choose where on your computer you would like to store the program</p>
 <p><img alt="" src="../assets/images/new_project/project/step_4.png" /></p>
 </div>
 <div class="admonition summary">
-<p>7) <strong>Enter a project name</strong> in the text field labeled as such<br />
-8) <strong>Enter your team number</strong> in the text field labeled as such<br />
-9) Select <strong>Generate Project</strong>  </p>
+<p><strong>7)</strong> <strong>Enter a project name</strong> in the text field labeled as such<br />
+<strong>8)</strong> <strong>Enter your team number</strong> in the text field labeled as such<br />
+<strong>9)</strong> Select <strong>Generate Project</strong>  </p>
 <p><img alt="" src="../assets/images/new_project/project/step_5.png" /></p>
 </div>
 <div class="admonition summary">
-<p>1)  When prompted <strong>“Would you like to open the folder?”</strong>, select <strong>Yes (Current Window)</strong></p>
+<p><strong>10)</strong>  When prompted <strong>“Would you like to open the folder?”</strong>, select <strong>Yes (Current Window)</strong></p>
 <p><img alt="" src="../assets/images/new_project/project/step_6.png" /></p>
 </div>
 <h3 id="default-project-contents">Default Project Contents<a class="headerlink" href="#default-project-contents" title="Permanent link">#</a></h3>
+<!-- TODO: Maybe remove this or combine it with the WPILib section -->
+
 <p>Newly created projects have many files within them. We only care about the contents within the <strong>src/main/java/frc/robot/</strong> folder. Everything else can be ignored at this point in the tutorial.</p>
 <p><strong>Files in the robot folder:</strong></p>
 <ul>
@@ -779,24 +710,23 @@
 <hr />
 <h2 id="creating-a-new-subsystem">Creating a New Subsystem<a class="headerlink" href="#creating-a-new-subsystem" title="Permanent link">#</a></h2>
 <div class="admonition summary">
-<p>1) Click on the <strong>src</strong> folder to expand it.<br />
-2) Do the same for <strong>subsystems</strong></p>
+<p><strong>1)</strong> Click on the <strong>src</strong> folder to expand it.<br />
+<strong>2)</strong> Do the same for <strong>subsystems</strong></p>
 <p><img alt="" src="../assets/images/new_project/subsystem/step_1.png" /></p>
 </div>
 <div class="admonition summary">
-<p>3) Right click on <strong>subsystems</strong> and select <strong>Create a new class/ command.</strong></p>
+<p><strong>3)</strong> Right click on <strong>subsystems</strong> and select <strong>Create a new class/ command.</strong></p>
 <p><img alt="" src="../assets/images/new_project/subsystem/step_2.png" /></p>
 </div>
 <div class="admonition summary">
-<p>4) Select <strong>Subsystem</strong> and type your <strong>DesiredSubsystemName</strong> (i.e. <strong>Drivetrain</strong>) for the name and hit enter on your keyboard.</p>
+<p><strong>4)</strong> Select <strong>Subsystem</strong> and type your <strong>DesiredSubsystemName</strong> (i.e. <strong>Drivetrain</strong>) for the name and hit enter on your keyboard.</p>
 <p><img alt="" src="../assets/images/new_project/subsystem/step_3.png" /><br />
 <img alt="" src="../assets/images/new_project/subsystem/step_4.png" /></p>
 </div>
 <div class="admonition summary">
-<p>5) Click on the newly create <strong>DesiredSubsystemName.java</strong> (or <strong>Drivetrain.java</strong> if you named it that)</p>
+<p><strong>5)</strong> Click on the newly create <strong>DesiredSubsystemName.java</strong> (or <strong>Drivetrain.java</strong> if you named it that)</p>
 <p><img alt="" src="../assets/images/new_project/subsystem/step_5.png" /></p>
 </div>
-<hr />
 <h3 id="adding-the-subsystem-to-robotjava">Adding the Subsystem to Robot.java<a class="headerlink" href="#adding-the-subsystem-to-robotjava" title="Permanent link">#</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Do not forget this step!</p>
@@ -807,11 +737,11 @@ We have created a new subsystem but we have not yet linked it to Robot.java.  </
 </div>
 </div>
 <div class="admonition summary">
-<p>1) In Robot.java we will create a new <strong>global</strong> variable of type <code>DesiredSubsystemName</code> (i.e. <code>Drivetrain</code>) named <code class="codehilite"><span class="n">m_desiredSubsystemName</span></code> (<code>i.e. m_drivetrain</code>) and set its value to <code>null</code>.  </p>
+<p><strong>1)</strong> In Robot.java we will create a new <strong>global</strong> variable of type <code>DesiredSubsystemName</code> (i.e. <code>Drivetrain</code>) named <code class="codehilite"><span class="n">m_desiredSubsystemName</span></code> (<code>i.e. m_drivetrain</code>) and set its value to <code>null</code>.  </p>
 <p><img alt="" src="../assets/images/new_project/subsystem/step_6.png" /></p>
 </div>
 <div class="admonition summary">
-<p>2) In the <code>robotInit()</code> method add: <code class="codehilite"><span class="n">m_desiredSubsystemName</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DesiredSubsystemName</span><span class="o">();</span></code> (i.e. <code class="codehilite"><span class="n">m_drivetrain</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Drivetrain</span><span class="o">();</span></code>)</p>
+<p><strong>2)</strong> In the <code>robotInit()</code> method add: <code class="codehilite"><span class="n">m_desiredSubsystemName</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DesiredSubsystemName</span><span class="o">();</span></code> (i.e. <code class="codehilite"><span class="n">m_drivetrain</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Drivetrain</span><span class="o">();</span></code>)</p>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
 <p>This must always be done above <strong>OI</strong> and <strong>Telemetry/SmartDashboard</strong> (if present).</p>
@@ -851,23 +781,24 @@ We have created a new subsystem but we have not yet linked it to Robot.java.  </
 </pre></div>
 
 </details>
+<hr />
 <h2 id="creating-a-new-command">Creating a New Command<a class="headerlink" href="#creating-a-new-command" title="Permanent link">#</a></h2>
 <div class="admonition summary">
-<p>1) Click on the <strong>src</strong> folder to expand it (if it isn't already).<br />
-2) Do the same for <strong>commands</strong></p>
+<p><strong>1)</strong> Click on the <strong>src</strong> folder to expand it (if it isn't already).<br />
+<strong>2)</strong> Do the same for <strong>commands</strong></p>
 <p><img alt="" src="../assets/images/new_project/command/step_1.png" /></p>
 </div>
 <div class="admonition summary">
-<p>3) Right click on <strong>commands</strong> and select <strong>Create a new class/ command.</strong>  </p>
+<p><strong>3)</strong> Right click on <strong>commands</strong> and select <strong>Create a new class/ command.</strong>  </p>
 <p><img alt="" src="../assets/images/new_project/command/step_2.png" /></p>
 </div>
 <div class="admonition summary">
-<p>4) Select <strong>Command</strong> and type <strong>DesiredCommandName</strong> (i.e. DriveArcade) for the name and hit enter on your keyboard.  </p>
+<p><strong>4)</strong> Select <strong>Command</strong> and type <strong>DesiredCommandName</strong> (i.e. DriveArcade) for the name and hit enter on your keyboard.  </p>
 <p><img alt="" src="../assets/images/new_project/command/step_3.png" /><br />
 <img alt="" src="../assets/images/new_project/command/step_4.png" /></p>
 </div>
 <div class="admonition summary">
-<p>5) Click on the newly create <strong>DesiredCommandName.java</strong> (or <strong>DriveArcade.java</strong> if you named it that)</p>
+<p><strong>5)</strong> Click on the newly create <strong>DesiredCommandName.java</strong> (or <strong>DriveArcade.java</strong> if you named it that)</p>
 <p><img alt="" src="../assets/images/new_project/command/step_5.png" /></p>
 </div>
 <h3 id="default-command-contents">Default Command Contents<a class="headerlink" href="#default-command-contents" title="Permanent link">#</a></h3>

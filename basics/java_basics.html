@@ -709,14 +709,18 @@ main loads class1, class1 loads class2</div>
 <li>Classes can also <strong>call</strong> (use) variables or methods of other classes if those have been set to public.</li>
 </ul>
 <h3 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">#</a></h3>
-<!-- TODO: Add info about keyword new -->
-
 <ul>
 <li>Classes can also have a <strong><em>constructor</em></strong> which is a special type of <strong>method</strong> that has the <strong>same name (case sensitive)</strong> as the class file<ul>
 <li>Constructors are always called when the class is loaded into the program for the first time. This is often the only time they are called.</li>
 <li>Constructors are called when trying to access the class in other files.</li>
 <li>They can be called again if the class is programmed to be unloaded (destroyed) and reloaded.</li>
 <li>Calls to methods, and assignment of values, within the constructor will run as soon as the class is called (loaded) in the code.</li>
+<li>The <strong>new</strong> operator creates an object of a type of class using a constructor</li>
+<li>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+classObject = new className();</div>
+</li>
 </ul>
 </li>
 </ul>
@@ -781,7 +785,7 @@ A variable can either hold a true or false value and is being assigned a true va
 <p>Most variables can have their values assigned or reassigned at any point elsewhere in your program. To avoid having a variable change its value during runtime you can make it a <strong>constant</strong></p>
 <ul>
 <li>In Java you can create constants using the <code class="codehilite"><span class="kd">static</span> <span class="kd">final</span></code> keywords together in front of the data type of the variable<ul>
-<li>The static modifier causes the variable to be available without loading an the class where it is defined. </li>
+<li>The static modifier causes the variable to be available without loading the class where it is defined. </li>
 <li>The final modifier causes the variable to be unchangeable.</li>
 <li>Java constants are normally declared in ALL CAPS. Words in Java constants are normally separated by underscores.</li>
 <li>

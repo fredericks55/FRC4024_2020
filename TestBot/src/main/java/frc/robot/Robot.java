@@ -5,8 +5,9 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.SpeedController;
-import edu.wpi.first.wpilibj.Talon;
+
+import com.ctre.phoenix.motorcontrol.ControlMode; //you need the phoenix framework to deploy the code (once again thanks WPILIB)
+import com.ctre.phoenix.motorcontrol.can.TalonSRX; //you need the phoenix framework to deploy the code (once again thanks WPILIB)
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
 
@@ -18,11 +19,11 @@ import edu.wpi.first.wpilibj.Timer;
  */
 public class Robot extends TimedRobot {
 
-  //the four servos that control the wheels
-  public SpeedController rightFront;
-  public SpeedController rightBack;
-  public SpeedController leftFront;
-  public SpeedController leftBack;
+  //the four TalonSRXs that control the wheels
+  public TalonSRX rightFront;
+  public TalonSRX rightBack;
+  public TalonSRX leftFront;
+  public TalonSRX leftBack;
 
   public Timer timer;
   public Joystick moveJoystick;
@@ -34,48 +35,51 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit() {
-      //currently initing with Talon, but can be anything since we're using the SpeedController interface
-      rightFront = new Talon(0); //port 0 on PMC
-      rightBack = new Talon(1); //port 1 on PMC
-      leftFront = new Talon(2); //port 2 on PMC
-      leftBack = new Talon(3); //port 3 on PMC
+    System.out.println("robot init");
 
-      moveJoystick = new Joystick(0); //port 0 on driver station
-      rotateJoystick = new Joystick(1); //port 1 on driver station
+    //init talon
+    rightFront = new TalonSRX(1); //port 1 on CAN
+    rightBack = new TalonSRX(2); //port 2 on CAN
+    leftFront = new TalonSRX(3); //port 3 on CAN
+    leftBack = new TalonSRX(4); //port 4 on CAN*/
 
-      timer = new Timer(); // init timer
-      m_period = 5; // idk
+    moveJoystick = new Joystick(0); //port 0 on driver station
+    rotateJoystick = new Joystick(1); //port 1 on driver station
+
+    timer = new Timer(); // init timer
   }
 
   /** This function is run once each time the robot enters autonomous mode. */
   @Override
   public void autonomousInit() {
-
+    System.out.println("autonomous init");
   }
 
   /** This function is called periodically during autonomous. */
   @Override
   public void autonomousPeriodic() {
-
+    System.out.println("autonomous periodic");
   }
 
   /** This function is called once each time the robot enters teleoperated mode. */
   @Override
   public void teleopInit() {
     timer.start();
+    System.out.println("teleop init");
   }
 
   /** This function is called periodically during teleoperated mode. */
   @Override
   public void teleopPeriodic() {
-    rightFront.set(-moveJoystick.getY());
-    leftFront.set(-moveJoystick.getY());
-    rightBack.set(-moveJoystick.getY());
-    leftBack.set(-moveJoystick.getY());
-    System.out.println("yVal: " + moveJoystick.getY());
-    System.out.println("xVal: " + moveJoystick.getX());
+    System.out.println("teleop periodic");
 
-    
+    //y is negated because AFAIK joystick up is negative for some unknowable reason (thanks WPILIB, appreciate it)
+    double speed = Math.min(-moveJoystick.getY(), 0.9); //dont go faster than 90%
+    rightFront.set(ControlMode.PercentOutput, speed);
+    leftFront.set(ControlMode.PercentOutput, speed);
+    rightBack.set(ControlMode.PercentOutput, speed);
+    leftBack.set(ControlMode.PercentOutput, speed);
+    System.out.println("speed: " + moveJoystick.getY());
   }
 
   /** This function is called once each time the robot enters test mode. */

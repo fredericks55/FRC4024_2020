@@ -10,6 +10,10 @@ import com.ctre.phoenix.motorcontrol.ControlMode; //you need the phoenix framewo
 import com.ctre.phoenix.motorcontrol.can.TalonSRX; //you need the phoenix framework to deploy the code (once again thanks WPILIB)
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.XboxController;
+
+import static edu.wpi.first.wpilibj.DoubleSolenoid.Value.*;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -26,8 +30,9 @@ public class Robot extends TimedRobot {
   public TalonSRX leftBack;
 
   public Timer timer;
-  public Joystick moveJoystick;
-  public Joystick rotateJoystick;
+  public XboxController controller;
+
+  public DoubleSolenoid piston1;
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -43,8 +48,10 @@ public class Robot extends TimedRobot {
     leftFront = new TalonSRX(3); //port 3 on CAN
     leftBack = new TalonSRX(4); //port 4 on CAN*/
 
-    moveJoystick = new Joystick(0); //port 0 on driver station
-    rotateJoystick = new Joystick(1); //port 1 on driver station
+    controller = new XboxController(0); //port 0 on driver station
+
+    piston1 = new DoubleSolenoid(0, 1); //i really have no idea how this works. 
+    piston1.set(kForward);
 
     timer = new Timer(); // init timer
   }
@@ -72,14 +79,18 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     System.out.println("teleop periodic");
+    
+    if(controller.getAButtonPressed()) {
+      piston1.toggle();
+    }
 
     //y is negated because AFAIK joystick up is negative for some unknowable reason (thanks WPILIB, appreciate it)
-    double speed = Math.min(-moveJoystick.getY(), 0.9); //dont go faster than 90%
+    /*double speed = Math.min(-controller.getY(), 0.9); //dont go faster than 90%
     rightFront.set(ControlMode.PercentOutput, speed);
     leftFront.set(ControlMode.PercentOutput, speed);
     rightBack.set(ControlMode.PercentOutput, speed);
     leftBack.set(ControlMode.PercentOutput, speed);
-    System.out.println("speed: " + moveJoystick.getY());
+    System.out.println("speed: " + controller.getY());*/
   }
 
   /** This function is called once each time the robot enters test mode. */

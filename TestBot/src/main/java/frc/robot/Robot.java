@@ -18,6 +18,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import java.time.*;
+import java.time.temporal.TemporalUnit;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -32,10 +33,12 @@ public class Robot extends TimedRobot {
   public TalonSRX right2;
   public TalonSRX left1;
   public TalonSRX left2;
+
+  public TalonSRX doorMotor;
   public TalonSRX ballGear;
 
   //ultrasonic sensor
-  public AnalogInput ultrasonicSensor;
+  public AnalogInput ultrasonicSensor; //not using this?
 
   //flag to check if we should turn the ball gear
   public boolean isBallGearOn = false;
@@ -50,15 +53,15 @@ public class Robot extends TimedRobot {
   public DoubleSolenoid piston1;
 
   //percent of max speed to run at
-  public double aspeed = 0.3;
+  public double aspeed = 0.25;
 
-  public boolean debugMode = true;
+  public boolean debugMode = false;
 
   //should move
   public boolean mov = false;
 
-  //debug instant for timing things
-  Instant start;
+  Instant trapdoorInstant;
+  boolean open = false;
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -66,7 +69,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit() {
-    System.out.println("robot init");
+    //System.out.println("robot init");
 
     //init talon
     right1 = new TalonSRX(5); //port 5 on CAN
@@ -76,7 +79,9 @@ public class Robot extends TimedRobot {
 
     ballGear = new TalonSRX(2); //port 2 on CAN
 
-    ultrasonicSensor = new AnalogInput(0); // port () on CAN
+    doorMotor = new TalonSRX(6);
+
+    //ultrasonicSensor = new AnalogInput(0); // port () on CAN
 
     controller = new XboxController(0); //port 0 on driver station
 
@@ -87,104 +92,81 @@ public class Robot extends TimedRobot {
 
     timer = new Timer(); // init timer
 
-    start = Instant.now(); //init instant with current time
+    trapdoorInstant = Instant.now(); //init instant with current time
   }
 
   /** This function is run once each time the robot enters autonomous mode. */
   @Override
   public void autonomousInit() {
-    System.out.println("autonomous init");
+    //System.out.println("autonomous init");
   }
 
   /** This function is called periodically during autonomous. */
   @Override
   public void autonomousPeriodic() {
-    System.out.println("autonomous periodic");
+    //System.out.println("autonomous periodic");
   }
 
   /** This function is called once each time the robot enters teleoperated mode. */
   @Override
   public void teleopInit() {
     timer.start();
-    System.out.println("teleop init");
+    //System.out.println("teleop init");
   }
 
   /** This function is called periodically during teleoperated mode. */
   @Override
   public void teleopPeriodic() {
-    if(debugMode) {
-      System.out.println("teleop periodic");
-      long timeElapsed = Duration.between(start, Instant.now()).toMillis();
-  
-      if(controller.getAButtonPressed()) {
-        aspeed += 0.02;
-      } 
-      if(controller.getBButtonPressed()) {
-        aspeed -= 0.02;
-      } 
-      if(controller.getYButtonPressed()) {
-        start = Instant.now();
+    if(controller.getAButtonPressed()) {
+      trapdoorInstant = Instant.now();
+      open = !open;
+    }
+
+    if(Duration.between(trapdoorInstant, Instant.now()).toMillis() < 300) {
+      if(open) {
+        doorMotor.set(ControlMode.PercentOutput, 0.2);
+      }else {
+        doorMotor.set(ControlMode.PercentOutput, -0.2);
       }
-      if(controller.getXButtonPressed()) {
-        mov = !mov;
-      }
-      System.out.println(aspeed);
-      System.out.println(mov);
-      if(timeElapsed >= 1000) {
-        right1.set(ControlMode.PercentOutput, 0);
-        right2.set(ControlMode.PercentOutput, 0);
-        left1.set(ControlMode.PercentOutput, 0);
-        left2.set(ControlMode.PercentOutput, 0);
-      }else if(mov) {
-        right1.set(ControlMode.PercentOutput, -aspeed);
-        right2.set(ControlMode.PercentOutput, -aspeed);
-        left1.set(ControlMode.PercentOutput, aspeed);
-        left2.set(ControlMode.PercentOutput, aspeed);
-      }
-      SmartDashboard.putNumber("DB/Slider 0", aspeed);
     }else {
-      if(controller.getAButtonPressed()) {
-        //piston1.toggle();
-      }
+      doorMotor.set(ControlMode.PercentOutput, 0);
+    }
 
-      if(controller.getBButtonPressed()) {
-        isBallGearOn = !isBallGearOn;
-      }
+    if(controller.getBButtonPressed()) {
+      isBallGearOn = !isBallGearOn;
+    }
 
-      if(isBallGearOn) {
-        ballGear.set(ControlMode.PercentOutput, 0.4);
-      }else {
-        ballGear.set(ControlMode.PercentOutput, 0);
-      }
+    if(isBallGearOn) {
+      ballGear.set(ControlMode.PercentOutput, 0.4);
+    }else {
+      ballGear.set(ControlMode.PercentOutput, 0);
+    }
 
-      if(controller.getBumper(kLeft)) {
-        double speed = 0.2;
-        right1.set(ControlMode.PercentOutput, -speed);
-        right2.set(ControlMode.PercentOutput, -speed);
-        left1.set(ControlMode.PercentOutput, -speed);
-        left2.set(ControlMode.PercentOutput, -speed);
-      }else if(controller.getBumper(kRight)) {
-        double speed = 0.2;
-        right1.set(ControlMode.PercentOutput, speed);
-        right2.set(ControlMode.PercentOutput, speed);
-        left1.set(ControlMode.PercentOutput, speed);
-        left2.set(ControlMode.PercentOutput, speed);
-      }else {
-        //y is negated because AFAIK joystick up is negative for some unknowable reason (thanks WPILIB, appreciate it)
-        double speed = Math.min(-controller.getY(kLeft) * 0.2 , 0.2); //dont go faster than 90%
-        right1.set(ControlMode.PercentOutput, -speed);
-        right2.set(ControlMode.PercentOutput, -speed);
-        left1.set(ControlMode.PercentOutput, speed);
-        left2.set(ControlMode.PercentOutput, speed);
-        System.out.println("speed: " + controller.getY(kLeft));
-      }
+    if(controller.getBumper(kLeft)) {
+      right1.set(ControlMode.PercentOutput, -aspeed);
+      right2.set(ControlMode.PercentOutput, -aspeed);
+      left1.set(ControlMode.PercentOutput, -aspeed);
+      left2.set(ControlMode.PercentOutput, -aspeed);
+    }else if(controller.getBumper(kRight)) {
+      right1.set(ControlMode.PercentOutput, aspeed);
+      right2.set(ControlMode.PercentOutput, aspeed);
+      left1.set(ControlMode.PercentOutput, aspeed);
+      left2.set(ControlMode.PercentOutput, aspeed);
+    }else {
+      //y is negated because AFAIK joystick up is negative for some unknowable reason (thanks WPILIB, appreciate it)
+      double speed = Math.min(-controller.getY(kLeft) * aspeed, 1.0); //dont go faster than 90%
+      right1.set(ControlMode.PercentOutput, -speed);
+      right2.set(ControlMode.PercentOutput, -speed);
+      left1.set(ControlMode.PercentOutput, speed);
+      left2.set(ControlMode.PercentOutput, speed);
+      //System.out.println("speed: " + controller.getY(kLeft));
+    }
 
-      if(controller.getYButton()) {
-        right1.set(ControlMode.PercentOutput, 0);
-        right2.set(ControlMode.PercentOutput, 0);
-        left1.set(ControlMode.PercentOutput, 0);
-        left2.set(ControlMode.PercentOutput, 0);
-      }
+    if(controller.getYButton()) {
+      right1.set(ControlMode.PercentOutput, 0);
+      right2.set(ControlMode.PercentOutput, 0);
+      left1.set(ControlMode.PercentOutput, 0);
+      left2.set(ControlMode.PercentOutput, 0);
     }
   }
 
